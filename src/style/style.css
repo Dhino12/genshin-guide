@@ -1,0 +1,145 @@
+@import url(colors.css);
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: oswald;
+    src: url('../assets/fonts/Oswald-VariableFont.ttf');
+}
+
+body {
+}
+
+.bg-mondstat{
+    background-image: url("../assets/image/nationalty/mondstat.png");
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    position: fixed;
+    background-size: cover;
+    object-fit: contain;
+    object-position: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: scale_bg 45s infinite linear alternate;
+}
+
+@keyframes scale_bg{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+} 
+
+/* navigation */
+.nav a{
+    position: relative;
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    font-size: 2ch;
+    color: black;
+    letter-spacing: 0.15em;
+}
+
+.nav a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 0;
+    bottom: 0; 
+    left: -94px;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    color: #E94560;
+}
+
+.nav a.active-page{
+    color: #E94560;
+}
+
+.nav a.active-page::before,
+.nav a:hover::before{
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 2px;
+    top: 0;
+    bottom: 0; 
+    left: -94px;
+    margin: auto;
+    background-color: #E94560; 
+}
+/* end-navigation */
+
+.title-page, .title-desc{
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.20em;
+}
+
+.title-chara{
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.20em;
+    color: #E94560;
+}
+
+/* tab */
+.tab-indicators{
+    width: 1146px;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    margin-left: 10%; 
+    scroll-behavior: smooth;
+    scrollbar-width: 5px;
+}
+
+.horizontal-scroll{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.horizontal-scroll::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+} 
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #E94560; 
+  border-radius: 10px;
+}
+
+
+.p-active,
+.col-1 img:hover{
+    background-color: #E94560;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.col-1 img{
+    padding: 3px;
+    transition: 0.5s ease;
+}
+
+.p-unactive{
+    padding: 3px;
+    background-color: #24242449;
+}
+
+.container{
+    margin-top: 15%;
+    margin-left: 15%;
+}
