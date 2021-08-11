@@ -104,8 +104,7 @@
 }
 
 .horizontal-scroll{
-    overflow: auto;
-    white-space: nowrap;
+    overflow: auto; 
 }
 
 .horizontal-scroll#skill_telents{

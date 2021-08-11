@@ -9,7 +9,7 @@ const main = () => {
 
     const onLoadedTabIndicators = async () => {
         try {
-            // const data = await DataCharacter.getChara();
+            const data = await DataCharacter.getChara();
             console.log(data);
             renderResult(data);
         } catch (error) {
