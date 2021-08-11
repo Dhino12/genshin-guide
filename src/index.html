@@ -10,8 +10,8 @@
 
 <body>
     <div class="bg-mondstat option-bg"></div>
-    <div class="container-fluid my-xxl-5">
-        <header class="py-3 mb-3">
+    <div class="container-fluid mb-xxl-5 header">
+        <header class="py-3 mb-3 ">
             <div class="d-grid gap-3 align-items-center px-lg-5" style="grid-template-columns: 0.3fr 2fr 0.1fr;">
                 <div class="ps-xl-5">
                     <a href="#" class="">
@@ -28,8 +28,8 @@
         </header>
     </div>
 
-    <div class="d-flex container-fluid flex-row px-lg-5 ">
-        <nav id="navbar" class="navbar navbar-light flex-column align-items-stretch ms-5 pt-0 col-1">
+    <div class="d-flex container-fluid">
+        <nav id="navbar" class="navbar flex-column ms-5 pt-0 ">
             <nav class="nav flex-column">
                 <a class="nav-link mb-2" href="#item-1"><span>ARTIFACTS</span></a>
                 <a class="nav-link mb-2 active-page" href="#item-2"><span>CHARACTERS</span></a>
@@ -39,17 +39,126 @@
                 <a class="nav-link mb-2" href="#item-3"><span>ENEMIES</span></a>
             </nav>
         </nav>
-        <div class="position-relative col-10 ms-5"> 
+        <div class="position-relative " id="detail-character">
             <h2 class="title-page position-absolute top-0 start-50 translate-middle-x">CHARACTER</h2>
-            <div class="tab-indicators horizontal-scroll" >
+            <div class="tab-indicators horizontal-scroll">
                 <tab-indicators></tab-indicators>
             </div>
             <div class="container d-flex flex-row">
-                <img src="https://api.genshin.dev/characters/barbara/portrait.webp" width="400px">
+                <img src="https://api.genshin.dev/characters/barbara/portrait.webp" height="780px" >
                 <div class="container-sm m-5 w-50">
-                    <h2 class="title-desc">PROFILE</h2>
-                    <p>Nama : Barbara</p>
-                    <h2 class="title-desc">ARTIFACTS</h2>
+                    <h6>birthday : 00002-05-1</h6>
+                    <h2 class="title-chara">BARBARA</h2>
+                    <div class="row mb-4">
+                        <div class="col-6 col-sm-4 mb-2">
+                            <i class="fa fa-star" style="color: #E94560;" aria-hidden="true"></i>
+                            <i class="fa fa-star" style="color: #E94560;" aria-hidden="true"></i>
+                            <i class="fa fa-star" style="color: #E94560;" aria-hidden="true"></i>
+                        </div>
+                        <p>Every denizen of Mondstadt adores Barbara. However, she learned the word \"idol\" from a
+                            magazine.
+                        </p>
+                        <div class="row mb-3">
+                            <div class="col-2"><p class="bg-young-red">WEAPON</p></div>
+                            <div class="col-2 ms-5 me-5"><p id="value-weapon" class="bg-white">Catalyst</p></div>
+
+                            <div class="col-2"><p class="bg-young-red">VISION</p></div>
+                            <div class="col-2 ms-5"><p id="value-weapon" class="bg-white">Hydro</p></div> 
+                        </div> 
+                        <div class="row mb-3">
+                            <div class="col-2"><p class="bg-young-red">AFFILIATION</p></div>
+                            <div class="col-2 ms-5 me-5"><p id="value-weapon" class="bg-white">Church of Favonius</p></div>
+
+                            <div class="col-2"><p class="bg-young-red">NATION</p></div>
+                            <div class="col-2 ms-5"><p id="value-weapon" class="bg-white">Mondstadt</p></div>
+                        </div>
+                    </div>
+
+                    <h2 class="title-desc mb-3">SKILL TALENTS</h2>
+                    <div id="carousel-skill-telents" class="carousel slide">
+                        <div class="carousel-inner" id="carousel-skill">
+                            <div class="carousel-item active">
+                                <h4>Whisper of Water</h4>
+                                <p>Normal Attack</p>
+                                <p>Normal Attack\nPerform up to 4 water splashes attacks that deal Hydro DMG.\nCharged Attack\nConsumes a certain amount of Stamina to deal AoE Hydro DMG after a short casting time.\nPlunging Attack\nGathering the might of Hydro, Barbara plunges towards the ground from mid-air, damaging all enemies in her path. Deals AoE Hydro DMG upon impact with the ground.</p>
+                                <div class="d-flex flex-column horizontal-scroll flex-wrap" id="skill_telents">
+                                    <div class="row mb-3">
+                                        <div class="col-2"><p class="bg-young-red">1-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">2-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">3-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">4-hit DMG</p></div> 
+                                        <div class="col-2"><p class="bg-young-red">Charged Attack DMG</p></div> 
+                                        <div class="col-2"><p class="bg-young-red">Charged Attack Stamina Cost</p></div> 
+                                    </div> 
+                                    <div class="row mb-3"> 
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">37.8%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">35.5%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">41%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">55.2%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">166%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">50%</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <h4>Whisper of Water</h4>
+                                <p>Normal Attack</p>
+                                <p>Normal Attack\nPerform up to 4 water splashes attacks that deal Hydro DMG.\nCharged Attack\nConsumes a certain amount of Stamina to deal AoE Hydro DMG after a short casting time.\nPlunging Attack\nGathering the might of Hydro, Barbara plunges towards the ground from mid-air, damaging all enemies in her path. Deals AoE Hydro DMG upon impact with the ground.</p>
+                                <div class="d-flex flex-column horizontal-scroll flex-wrap" id="skill_telents">
+                                    <div class="row mb-3">
+                                        <div class="col-2"><p class="bg-young-red">1-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">2-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">3-hit DMG</p></div>
+                                        <div class="col-2"><p class="bg-young-red">4-hit DMG</p></div> 
+                                        <div class="col-2"><p class="bg-young-red">Charged Attack DMG</p></div> 
+                                        <div class="col-2"><p class="bg-young-red">Charged Attack Stamina Cost</p></div> 
+                                    </div> 
+                                    <div class="row mb-3"> 
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">37.8%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">35.5%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">41%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">55.2%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">166%</p></div>
+                                        <div class="col-2"><p id="value-weapon" class="bg-white-skill">50%</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-prev bg-dark-blue" type="button" data-bs-target="#carousel-skill-telents" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-next bg-dark-blue" type="button" data-bs-target="#carousel-skill-telents" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-sm">
+                <h2 class="title-desc mb-3">CONSTELLATIONS</h2> 
+                <div class="row">
+                    <div class="card me-3 rounded-3" style="width: 18rem;"> 
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gleeful Songs</h5> 
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Constellation Lv. 1</li>
+                            <li class="list-group-item">Barbara regenerates 1 Energy every 10s.</li>
+                            <li class="list-group-item"><span>Level : </span> <span id="level">1</span></li>
+                        </ul> 
+                    </div>
+                    <div class="card me-3 rounded-3" style="width: 18rem;"> 
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gleeful Songs</h5> 
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Constellation Lv. 1</li>
+                            <li class="list-group-item">Barbara regenerates 1 Energy every 10s.</li>
+                            <li class="list-group-item"><span>Level : </span> <span id="level">1</span></li>
+                        </ul> 
+                    </div>
                 </div>
             </div>
         </div>

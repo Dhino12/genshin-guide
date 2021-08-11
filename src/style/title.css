@@ -1,0 +1,27 @@
+.title-page{
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    color: #0F3460;
+    letter-spacing: 0.20em;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    transform: translateX(-50%)!important;
+}
+
+.title-desc{
+    font-family: 'oswald', sans-serif;
+    font-weight: bold;
+    color: #0F3460;
+    letter-spacing: 0.20em;
+}
+
+.title-chara{
+    height: 65px;
+    font-family: 'genshin', sans-serif;
+    font-weight: bold;
+    font-size: 65px;
+    letter-spacing: 0.20em;
+    color: #0F3460;
+    margin-bottom: 0px;
+}

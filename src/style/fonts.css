@@ -1,0 +1,9 @@
+@font-face {
+    font-family: genshin;
+    src: url('../assets/fonts/Teko-Light.ttf');
+}
+
+@font-face {
+    font-family: oswald;
+    src: url('../assets/fonts/Oswald-VariableFont.ttf');
+}

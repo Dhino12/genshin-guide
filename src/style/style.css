@@ -1,15 +1,9 @@
 @import url(colors.css);
+@import url(fonts.css); 
+@import url(title.css); 
 
 * {
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: oswald;
-    src: url('../assets/fonts/Oswald-VariableFont.ttf');
-}
-
-body {
 }
 
 .bg-mondstat{
@@ -36,13 +30,28 @@ body {
     }
 } 
 
+/* header */
+.header{
+    position: fixed;
+    height: 120px;
+    padding-top: 50px;
+    transition: 0.2s;
+    z-index: 1;
+
+}
+
 /* navigation */
+.navbar{
+    position: fixed;
+    top: 175px;
+}
+
 .nav a{
     position: relative;
     font-family: 'oswald', sans-serif;
     font-weight: bold;
     font-size: 2ch;
-    color: black;
+    color: #0F3460;
     letter-spacing: 0.15em;
 }
 
@@ -80,27 +89,16 @@ body {
 }
 /* end-navigation */
 
-.title-page, .title-desc{
-    font-family: 'oswald', sans-serif;
-    font-weight: bold;
-    color: black;
-    letter-spacing: 0.20em;
-}
-
-.title-chara{
-    font-family: 'oswald', sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.20em;
-    color: #E94560;
+#detail-character{
+    margin: 172px 30px 30px 300px; 
+    
 }
 
 /* tab */
 .tab-indicators{
     width: 1146px;
-    height: 100px;
-    position: absolute;
-    top: 90px;
-    margin-left: 10%; 
+    height: 100px; 
+    margin: 90px 0 50px 10% ;
     scroll-behavior: smooth;
     scrollbar-width: 5px;
 }
@@ -108,6 +106,10 @@ body {
 .horizontal-scroll{
     overflow: auto;
     white-space: nowrap;
+}
+
+.horizontal-scroll#skill_telents{
+    white-space: pre-wrap;
 }
 
 .horizontal-scroll::-webkit-scrollbar{
@@ -139,7 +141,66 @@ body {
     background-color: #24242449;
 }
 
-.container{
-    margin-top: 15%;
-    margin-left: 15%;
+/* end-tab */
+
+/* detail-character */
+
+.all-chara::-webkit-scrollbar{
+    display: none;
+}
+
+.row .col-2 p{
+    width: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px    ;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.row .col-2 p.bg-young-red::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 100px;
+    width: 40px;
+    height: 2px;
+    background-color: #E94560;
+}
+
+.row .col-2 p.bg-white-skill::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    z-index: -1;
+    transform: rotate(90deg);
+    width: 90px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.carousel-prev,.carousel-next{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 2px; 
+    text-align: center; 
+    border: 0;
+    opacity: .5;
+    transition: 0.5s ease;
+    border-radius: 5px;
+}
+
+.carousel-next:hover, .carousel-prev:hover{
+    background-color: black;
+}
+
+.carousel-prev{
+    right: 50px;
 }
