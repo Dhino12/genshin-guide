@@ -33,9 +33,9 @@ class ItemSkill extends HTMLElement{
             <h6 style="color:#0F3460;">${this._itemSkill.unlock}</h6>
             <p>${this._itemSkill.description}</p>
             <div class="d-flex flex-column horizontal-scroll" id="skill_telents">
-            <div class="d-flex mb-3">${this._tmpUpSkill}</div>
-            <div class="d-flex mb-3">${this._tmpNameSkill}</div> 
-        </div>
+            <div class="d-flex mb-4">${this._tmpUpSkill}</div>
+            <div class="d-flex mb-4">${this._tmpNameSkill}</div> 
+            </div>
         `
         }
     }

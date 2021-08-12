@@ -1,5 +1,6 @@
 import "../component/detailCharacter/profile-chara.js";
 import "../component/detailCharacter/skillCarousel/list-skill-talent.js";
+import "../component/detailCharacter/constellation/list-constellation"
 import DataCharacter from "../data/data-source.js";
 
 const slideShow = () => { 
@@ -30,6 +31,8 @@ const detailCharacter = (linkImage) => {
     listSkillTalentElement.setAttribute("class", "carousel slide d-block");
     listSkillTalentElement.setAttribute("id", "carousel-skill-telents");
     
+    const listConstellation = document.querySelector("list-constellation");
+
     const portraitChara = document.querySelector("#portrait-chara");
     portraitChara.src = getPathChara(linkImage, true);
     const resultPathChara = getPathChara(linkImage, false);
@@ -46,6 +49,7 @@ const detailCharacter = (linkImage) => {
     const renderResult = result => { 
         profCharaElement.profileChara = result;
         listSkillTalentElement.skillTalents = result.skillTalents;
+        listConstellation.listConstellations = result.constellations;
     }
 
     loadDetailChara();
