@@ -1,12 +1,12 @@
 @import url(colors.css);
-@import url(fonts.css); 
-@import url(title.css); 
+@import url(fonts.css);
+@import url(title.css);
 
 * {
     box-sizing: border-box;
 }
 
-.bg-mondstat{
+.bg-mondstat {
     background-image: url("../assets/image/nationalty/mondstat.png");
     width: 100%;
     height: 100%;
@@ -21,17 +21,18 @@
     animation: scale_bg 45s infinite linear alternate;
 }
 
-@keyframes scale_bg{
-    0%{
+@keyframes scale_bg {
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.2);
     }
-} 
+}
 
 /* header */
-.header{
+.header {
     position: fixed;
     height: 120px;
     padding-top: 50px;
@@ -41,12 +42,12 @@
 }
 
 /* navigation */
-.navbar{
+.navbar {
     position: fixed;
     top: 175px;
 }
 
-.nav a{
+.nav a {
     position: relative;
     font-family: 'oswald', sans-serif;
     font-weight: bold;
@@ -55,87 +56,91 @@
     letter-spacing: 0.15em;
 }
 
-.nav a::before{
+.nav a::before {
     content: "";
     position: absolute;
     width: 0;
     height: 2px;
     top: 0;
-    bottom: 0; 
+    bottom: 0;
     left: -94px;
     margin: auto;
     transition: 0.3s;
 }
 
-.nav a:hover{
+.nav a:hover {
     color: #E94560;
 }
 
-.nav a.active-page{
+.nav a.active-page {
     color: #E94560;
 }
 
 .nav a.active-page::before,
-.nav a:hover::before{
+.nav a:hover::before {
     content: "";
     position: absolute;
     width: 95px;
     height: 2px;
     top: 0;
-    bottom: 0; 
+    bottom: 0;
     left: -94px;
     margin: auto;
-    background-color: #E94560; 
+    background-color: #E94560;
 }
+
 /* end-navigation */
 
-#detail-character{
-    margin: 172px 30px 30px 300px; 
-    
+#detail-character {
+    margin: 172px 30px 30px 300px;
+
 }
 
 /* tab */
-.tab-indicators{
+.tab-indicators {
     width: 1146px;
-    height: 100px; 
-    margin: 90px 0 50px 10% ;
+    height: 100px;
+    margin: 90px 0 50px 10%;
     scroll-behavior: smooth;
     scrollbar-width: 5px;
 }
 
-.horizontal-scroll{
-    overflow: auto; 
+.horizontal-scroll {
+    overflow: auto;
 }
 
-.horizontal-scroll#skill_telents{
+.horizontal-scroll#skill_telents {
     white-space: pre-wrap;
 }
 
-.horizontal-scroll::-webkit-scrollbar{
+.horizontal-scroll::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-} 
-
-.horizontal-scroll::-webkit-scrollbar-thumb {
-  background: #0F3460; 
-  border-radius: 10px;
 }
 
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #0F3460;
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
 
 .p-active,
-.col-1 img:hover{
+.col-1 img:hover {
     background-color: #E94560;
     border-radius: 50%;
     padding: 3px;
     cursor: pointer;
 }
 
-.col-1 img{
+.col-1 img {
     padding: 3px;
     transition: 0.5s ease;
 }
 
-.p-unactive{
+.p-unactive {
     padding: 3px;
     background-color: #24242449;
 }
@@ -144,20 +149,23 @@
 
 /* detail-character */
 
-.all-chara::-webkit-scrollbar{
+.all-chara::-webkit-scrollbar {
     display: none;
 }
 
-.row .col-2 p{
+.row .col-2 p,
+.d-flex .col-2 p{
     width: 100px;
     padding-top: 2px;
-    padding-bottom: 2px    ;
+    padding-bottom: 2px;
     text-align: center;
     margin-bottom: 0;
     position: relative;
 }
 
-.row .col-2 p.bg-young-red::before{
+.row .col-2 p.bg-young-red::before,
+.d-flex .col-2 p.bg-young-red::before
+{
     content: "";
     display: block;
     position: absolute;
@@ -168,7 +176,8 @@
     background-color: #E94560;
 }
 
-.row .col-2 p.bg-white-skill::before{
+.row .col-2 p.bg-white-skill::before,
+.d-flex .col-2 p.bg-white-skill::before {
     content: "";
     display: block;
     position: absolute;
@@ -180,26 +189,27 @@
     background-color: #fff;
 }
 
-.carousel-prev, .carousel-next{
+.carousel-prev,
+.carousel-next {
     position: absolute;
     top: 0;
-    right: 0;
-    z-index: 1;
+    right: 0; 
     display: flex;
     align-items: center;
-    justify-content: center; 
-    padding: 2px; 
-    text-align: center; 
+    justify-content: center;
+    padding: 2px;
+    text-align: center;
     border: 0;
     opacity: .5;
     transition: 0.5s ease;
     border-radius: 5px;
 }
 
-.carousel-next:hover, .carousel-prev:hover{
+.carousel-next:hover,
+.carousel-prev:hover {
     background-color: black;
 }
 
-.carousel-prev{
+.carousel-prev {
     right: 50px;
 }

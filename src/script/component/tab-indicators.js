@@ -8,7 +8,6 @@ class TabIndicators extends HTMLElement {
 
     set tabs(tabsIcon) {
         this._tabsIcon = tabsIcon;
-        console.log(`${this._tabsIcon} hello`);
         this.render();
     }
 

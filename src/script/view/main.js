@@ -3,23 +3,21 @@ import {Carousel} from "bootstrap/dist/js/bootstrap.esm.min.js"
 import slideShow from "./slide-show.js";
 import DataCharacter from "../data/data-source.js";
 
-const main = () => {
-    const rowTabCharacter = document.querySelector("div.row");
+const main = () => { 
     const tabIndicators = document.querySelector("tab-indicators");
 
     const onLoadedTabIndicators = async () => {
         try {
-            const data = await DataCharacter.getChara();
-            console.log(data);
+            const data = await DataCharacter.getNameChara();
             renderResult(data);
-        } catch (error) {
-
-        }
-
+        } catch (error) { 
+            console.error(error);
+        } 
     }
 
     const renderResult = results => {
         tabIndicators.tabs = results;
+        
         slideShow();
     }
 
@@ -32,7 +30,7 @@ const main = () => {
             getHeader.classList.add("bg-header-scroll");
         }  else{
             getHeader.classList.remove("bg-header-scroll");
-        } 
+        }
     })
 
     const myCarousel = document.querySelector(".carousel");
