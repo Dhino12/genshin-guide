@@ -117,7 +117,7 @@
 } 
 
 .horizontal-scroll::-webkit-scrollbar-thumb {
-  background: #E94560; 
+  background: #0F3460; 
   border-radius: 10px;
 }
 
@@ -180,7 +180,7 @@
     background-color: #fff;
 }
 
-.carousel-prev,.carousel-next{
+.carousel-prev, .carousel-next{
     position: absolute;
     top: 0;
     right: 0;

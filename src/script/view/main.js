@@ -1,6 +1,6 @@
 import "../component/tab-indicators.js"
 import {Carousel} from "bootstrap/dist/js/bootstrap.esm.min.js"
-// import "./slide-show.js";
+import slideShow from "./slide-show.js";
 import DataCharacter from "../data/data-source.js";
 
 const main = () => {
@@ -36,23 +36,8 @@ const main = () => {
     })
 
     const myCarousel = document.querySelector(".carousel");
-    // const carousel = new Carousel(myCarousel);    
+    const carousel = new Carousel(myCarousel);    
 
-}
-
-
-const slideShow = () => {
-    const tabIndicator = document.querySelector("tab-indicators");
-    const iconIndicator = document.querySelectorAll("tab-item img");
-
-    tabIndicator.addEventListener("click", function (e) {
-        if (e.target.className == "rounded-circle") {
-            iconIndicator.forEach(e => {
-                e.className = "rounded-circle"
-            })
-            e.target.classList.add("p-active");
-        }
-    })
 }
 
 export default main;
