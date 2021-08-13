@@ -1,24 +1,28 @@
-class NavItem extends HTMLElement{
+class NavItem extends HTMLElement {
 
-    constructor(){
+    constructor() {
         super();
     }
 
-    set namePage(namePage){
+    set namePage(namePage) {
         console.log(namePage);
         this._namePage = namePage;
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this.id = "navbar";
         this.setAttribute("class", "navbars collapse navbar-collapse flex-column");
         this.render()
     }
 
-    render(){
+    render() {
         let pages = ""
         for (const page of this._namePage) {
-            pages += `<a class="nav-link mb-2" href="${page}.html"><span>${page.toUpperCase()}</span></a>`
+            if (page == "character") {
+                pages += `<a class="nav-link mb-2" href="index.html"><span>${page.toUpperCase()}</span></a>`
+            } else {
+                pages += `<a class="nav-link mb-2" href="${page}.html"><span>${page.toUpperCase()}</span></a>`
+            }
         }
 
         this.innerHTML = `
