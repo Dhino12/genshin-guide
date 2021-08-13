@@ -1,5 +1,5 @@
 import "../component/tab-indicators.js"
-import {Carousel} from "bootstrap/dist/js/bootstrap.esm.min.js"
+import { Carousel } from "bootstrap/dist/js/bootstrap.esm.min.js";
 import slideShow from "./slide-show.js";
 import DataCharacter from "../data/data-source.js";
 

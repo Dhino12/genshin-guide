@@ -1,0 +1,86 @@
+/* navigation */
+@media only screen and (max-width: 700px) {
+    /* navigation */
+    nav.navbars {
+        top: 16px;
+        margin-left: 0;
+        position: relative;
+        text-align: center;
+    }
+
+    .title-nav{
+        color: #0F3460;
+    }
+
+    #navbar a.active-page::before,
+    #navbar a:hover::before {
+        left: 4px;
+    }
+    /* end navigation */
+
+    /* header */
+    div.header {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .flex-columns-mobile-ver {
+        flex-direction: column !important;
+    }
+    /* end header */
+
+    /* detail-character */
+    div#detail-character {
+        margin: 10% 0;
+    }
+
+    /* indicator-tab */
+    div.tab-indicators {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    tab-item.col-1 {
+        width: auto;
+    }
+    /* end indicator tab */
+
+    /* content detailProfile */
+    .flex-columns-mobile-ver img#portrait-chara {
+        width: fit-content;
+        height: 580px;
+    }
+
+    div#content-detail {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    desc-chara div.row{
+        text-align: center;
+    }
+
+    desc-chara .row div.col-2 {
+        width: auto;
+        margin-left: 0!important;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    inner-carousel.carousel-inner#carousel-skill{
+        width: auto;
+        height: 300px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        overflow-y: auto; 
+    }
+
+    #skill_telents div.col-2{
+        margin-right: 50px;
+    }
+
+    h2.title-chara{
+        height: auto;
+    }
+    /* end content detailProfile */
+}

@@ -13,7 +13,7 @@
     <div class="container-fluid mb-xxl-5 header">
         <header class="py-3 mb-3 ">
             <div class="d-grid gap-3 align-items-center px-lg-5" style="grid-template-columns: 0.3fr 2fr 0.1fr;">
-                <div class="ps-xl-5">
+                <div class="ps-xl-5 text-center">
                     <a href="#" class="">
                         <span class="fs-4"><img src="src/assets/image/logo/logo_genshin.png" width="124px"
                                 alt="logo"></span>
@@ -28,25 +28,35 @@
         </header>
     </div>
 
-    <div class="d-flex container-fluid">
-        <nav id="navbar" class="navbar flex-column ms-5 pt-0 ">
-            <nav class="nav flex-column">
-                <a class="nav-link mb-2" href="#item-1"><span>ARTIFACTS</span></a>
-                <a class="nav-link mb-2 active-page" href="#item-2"><span>CHARACTERS</span></a>
-                <a class="nav-link mb-2" href="#item-3"><span>CONSUMABLES</span></a>
-                <a class="nav-link mb-2" href="#item-3"><span>WEAPONS</span></a>
-                <a class="nav-link mb-2" href="#item-3"><span>MATERIALS</span></a>
-                <a class="nav-link mb-2" href="#item-3"><span>ENEMIES</span></a>
-            </nav>
+    <div class="d-flex flex-columns-mobile-ver container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container d-flex flex-row">
+                <a class="navbar-brand navbar-toggler" href="#"><h2 class="title-nav">NAVBAR</h2></a>
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" 
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <nav id="navbar" class="navbars collapse navbar-collapse flex-column">
+                    <nav class="nav navbar-nav flex-column">
+                        <a class="nav-link mb-2" href="#item-1"><span>ARTIFACTS</span></a>
+                        <a class="nav-link mb-2 active-page" href="#item-2"><span>CHARACTERS</span></a>
+                        <a class="nav-link mb-2" href="#item-3"><span>CONSUMABLES</span></a>
+                        <a class="nav-link mb-2" href="#item-3"><span>WEAPONS</span></a>
+                        <a class="nav-link mb-2" href="#item-3"><span>MATERIALS</span></a>
+                        <a class="nav-link mb-2" href="#item-3"><span>ENEMIES</span></a>
+                    </nav>
+                </nav>
+            </div>
         </nav>
-        <div class="position-relative " id="detail-character">
+        <div class="position-relative" id="detail-character">
             <h2 class="title-page position-absolute top-0 start-50 translate-middle-x">CHARACTER</h2>
             <div class="tab-indicators horizontal-scroll">
                 <tab-indicators></tab-indicators>
             </div>
-            <div class="container d-flex flex-row">
-                <img src="https://api.genshin.dev/characters/barbara/portrait.webp" id="portrait-chara" height="780px" >
-                <div class="container-sm m-5 w-50">
+            <div class="container d-flex flex-row flex-columns-mobile-ver ">
+                <img src="" id="portrait-chara" height="780px" >
+                <div class="container-sm m-5 w-50" id="content-detail">
                     <prof-chara></prof-chara>
 
                     <h2 class="title-desc mb-3">SKILL TALENTS</h2>
@@ -56,7 +66,7 @@
 
             <div class="container-sm">
                 <h2 class="title-desc mb-3">CONSTELLATIONS</h2> 
-                <list-constellation class="d-flex flex-row horizontal-scroll pb-2"></list-constellation> 
+                <list-constellation class="d-flex flex-row horizontal-scroll pb-2 transitionAdd"></list-constellation> 
             </div>
         </div>
     </div>

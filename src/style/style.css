@@ -1,9 +1,14 @@
 @import url(colors.css);
 @import url(fonts.css);
 @import url(title.css);
+@import url(./responseive/media-query.css);
 
 * {
     box-sizing: border-box;
+}
+
+body{
+    animation: transitionIn 0.75s ;
 }
 
 .bg-mondstat {
@@ -21,6 +26,17 @@
     animation: scale_bg 45s infinite linear alternate;
 }
 
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes scale_bg {
     0% {
         transform: scale(1);
@@ -36,15 +52,17 @@
     position: fixed;
     height: 120px;
     padding-top: 50px;
-    transition: 0.2s;
+    transition: 0.75s;
     z-index: 1;
 
 }
 
 /* navigation */
-.navbar {
+.navbars {
     position: fixed;
     top: 175px;
+    margin-left: 3rem;
+    padding-top: 0;
 }
 
 .nav a {
@@ -56,7 +74,7 @@
     letter-spacing: 0.15em;
 }
 
-.nav a::before {
+.nav a::before{
     content: "";
     position: absolute;
     width: 0;
@@ -212,4 +230,8 @@
 
 .carousel-prev {
     right: 50px;
+}
+
+.transitionAdd{
+    transition: 0.5s ease;
 }

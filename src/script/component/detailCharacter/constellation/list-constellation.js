@@ -17,6 +17,7 @@ class ListConstellation extends HTMLElement {
     }
 
     render() {  
+        this.innerHTML = "";
         this._listConstellation.forEach(constellation => {
             const createItem = document.createElement("item-constellation");
             createItem.setAttribute("class", "card me-3 col-1 rounded-3 bg-grey-transparant");
