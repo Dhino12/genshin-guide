@@ -3,7 +3,6 @@ import "@fortawesome/fontawesome-free/js/fontawesome.min"
 import "@fortawesome/fontawesome-free/js/brands"
 import "@fortawesome/fontawesome-free/js/solid"
 import "./style/style.css";
-import "./script/component/classAdd.js"
 
 import main from "./script/view/main.js";
 

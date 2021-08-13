@@ -1,7 +1,9 @@
 import "../component/tab-indicators.js"
 import "../component/navigation/nav-container.js";
+import "../component/header/header";
+// import "../component/classAdd.js";
 import { Carousel } from "bootstrap/dist/js/bootstrap.esm.min.js";
-import slideShow from "./slide-show.js";
+import slideShow from "./detailCharacter.js";
 import DataCharacter from "../data/data-source.js";
 
 const main = () => { 
@@ -12,11 +14,12 @@ const main = () => {
     
     const onLoadedTabIndicators = async () => {
         try {
-            const data = await DataCharacter.getNameChara();
-            
+            const data = await DataCharacter.getNameChara(); 
             renderResult(data);
+
         } catch (error) { 
-            console.error(error);
+            alert("Maaf internet sudang dalam gangguan coba lagi nanti");
+            console.error("error: " + error);
         } 
     }
 
@@ -26,8 +29,7 @@ const main = () => {
             if(element.innerText == titlePage.innerText){
                 navLink[index].classList.add("active-page");
             }else{
-                console.log(element);
-                // navLink.classList.replace("active-page", "");
+                navLink[index].classList.add("nav-link", "mb-2");
             }
         })
         slideShow();
