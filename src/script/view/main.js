@@ -1,7 +1,6 @@
 import "../component/tab-indicators.js"
 import "../component/navigation/nav-container.js";
 import "../component/header/header";
-// import "../component/classAdd.js";
 import { Carousel } from "bootstrap/dist/js/bootstrap.esm.min.js";
 import slideShow from "./detailCharacter.js";
 import DataCharacter from "../data/data-source.js";

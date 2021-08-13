@@ -10,6 +10,10 @@ class TabIndicators extends HTMLElement {
         this._tabsIcon = tabsIcon;
         this.render();
     }
+    
+    connectedCallback(){
+        this.setAttribute("class", "d-flex");
+    }
 
     render() {
         this.innerHTML = "";
@@ -19,7 +23,7 @@ class TabIndicators extends HTMLElement {
             tabItemElement.setAttribute("class", "col-1 ms-2");
             this.appendChild(tabItemElement);
         });
-    } 
+    }
 }
 
 customElements.define('tab-indicators', TabIndicators);
