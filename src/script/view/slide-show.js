@@ -1,6 +1,6 @@
 import "../component/detailCharacter/profile-chara.js";
 import "../component/detailCharacter/skillCarousel/list-skill-talent.js";
-import "../component/detailCharacter/constellation/list-constellation"
+import "../component/detailCharacter/constellation/list-constellation";
 import DataCharacter from "../data/data-source.js";
 
 const slideShow = () => { 
@@ -39,10 +39,11 @@ const detailCharacter = (linkImage) => {
 
     const loadDetailChara = async() => {
         try{
+            portraitChara.classList.add("placeholder");
             const profileCharacter = await DataCharacter.getDetailChara(resultPathChara);
             renderResult(profileCharacter);
         }catch(e){
-
+            alert(e);
         }
     }
 
@@ -50,6 +51,8 @@ const detailCharacter = (linkImage) => {
         profCharaElement.profileChara = result;
         listSkillTalentElement.skillTalents = result.skillTalents;
         listConstellation.listConstellations = result.constellations;
+        
+        portraitChara.classList.remove("placeholder");
     }
 
     loadDetailChara();
