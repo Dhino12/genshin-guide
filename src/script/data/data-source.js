@@ -1,33 +1,28 @@
-const apiEndpoint = "http://api.genshin.dev"
+/* eslint-disable prefer-promise-reject-errors */
 
-class DataCharacter{ 
-    static getListName(path){
+const apiEndpoint = 'http://api.genshin.dev';
+
+class DataCharacter {
+    static getListName(path) {
         return fetch(`${apiEndpoint}/${path}`)
-            .then(response => {
-                return response.json();
-            })
-            .then(responseJson => {
-                if(responseJson){
-                    return Promise.resolve(responseJson)
-                }else{
-                    return Promise.reject(`404 not-found`)
+            .then((response) => response.json())
+            .then((responseJson) => {
+                if (responseJson) {
+                    return Promise.resolve(responseJson);
                 }
-            })
-        
+                return Promise.reject('404 not-found');
+            });
     }
 
     static getDetailItem(pathCharacter) {
         return fetch(`${apiEndpoint}${pathCharacter}`)
-            .then(response => {
-                return response.json()
-            })
-            .then(responseJson => {
-                if(responseJson){
+            .then((response) => response.json())
+            .then((responseJson) => {
+                if (responseJson) {
                     return Promise.resolve(responseJson);
-                }else{
-                    return Promise.reject(`404 not-found / character tidak ditemukan`);
                 }
-            })
+                return Promise.reject('404 not-found / character tidak ditemukan');
+            });
     }
 }
 
