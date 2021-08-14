@@ -17,13 +17,21 @@ class ListConstellation extends HTMLElement {
 
     render() {
         this.innerHTML = '';
-        this._listConstellation.forEach((constellation) => {
+        if (this._listConstellation.name !== undefined) {
             const createItem = document.createElement('card-item');
-            createItem.setAttribute('class', 'card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0');
-            createItem.setAttribute('style', 'width: 18rem;');
-            createItem.itemConstellation = constellation;
-            this.appendChild(createItem);
-        });
+                createItem.setAttribute('class', 'card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0');
+                createItem.setAttribute('style', 'width: 18rem;');
+                createItem.itemConstellation = this._listConstellation;
+                this.appendChild(createItem);
+        } else {
+            this._listConstellation.forEach((constellation) => {
+                const createItem = document.createElement('card-item');
+                createItem.setAttribute('class', 'card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0');
+                createItem.setAttribute('style', 'width: 18rem;');
+                createItem.itemConstellation = constellation;
+                this.appendChild(createItem);
+            });
+        }
     }
 }
 

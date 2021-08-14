@@ -83,5 +83,11 @@
     h2.title-chara{
         height: auto;
     }
+
+    h2.title-page{
+        position: relative!important;
+        margin-bottom: 100px;
+        margin-left: 20%;
+    }
     /* end content detailProfile */
 }

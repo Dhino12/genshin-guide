@@ -207,6 +207,14 @@ body{
     background-color: #fff;
 }
 
+/* image portrait character */
+.img-limit{
+    width: min-content;
+    height: 780px;
+    overflow: hidden; 
+}
+/* end image portrait character */
+
 /* skill */
 .carousel-prev,
 .carousel-next {

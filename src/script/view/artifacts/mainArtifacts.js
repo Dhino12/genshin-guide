@@ -1,5 +1,6 @@
 import DataCharacter from '../../data/data-source';
 import EffectSkill from '../effect/effectPage';
+import search from '../search/search';
 
 const artifacts = () => {
     const getListGrid = document.querySelector('list-card-grid');
@@ -21,6 +22,8 @@ const artifacts = () => {
 
     EffectSkill.navActive();
     EffectSkill.headerScrolEffect();
+
+    search('artifacts', renderResult);
 };
 
 export default artifacts;

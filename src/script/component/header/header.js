@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import './search-bar';
 
 class HeaderItem extends HTMLElement {
@@ -21,8 +22,7 @@ class HeaderItem extends HTMLElement {
                 </a>
             </div>
 
-            <search-bar></search-bar>
-            <button type='submit' class='btn btn-light p-2' value='search'><i class='fas fa-search'></i></button>
+            <search-bar style="display:contents;"></search-bar>
         </div>
         `;
     }

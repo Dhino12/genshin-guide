@@ -1,35 +1,23 @@
+/* eslint-disable no-restricted-syntax */
 import DataCharacter from '../data/data-source';
-
-const getPathChara = (linkImage, getImage) => {
-    const getLengthEnpoint = linkImage.length;
-
-    if (getImage === true) {
-        return linkImage.replace('icon', 'portrait');
-    }
-
-    if (getImage === false) {
-        return linkImage.slice(23, getLengthEnpoint).replace('icon.webp', '');
-    }
-
-    return undefined;
-};
+import search from './search/search';
+import getPathChara from './utility/getPathChara';
 
 const detailCharacter = (linkImage) => {
-    const profCharaElement = document.querySelector('prof-chara');
     const listSkillTalentElement = document.querySelector('list-skill-telent');
-    listSkillTalentElement.setAttribute('class', 'carousel slide d-block');
-    listSkillTalentElement.setAttribute('id', 'carousel-skill-telents');
-
     const listConstellation = document.querySelector('list-card-grid');
-
+    const profCharaElement = document.querySelector('prof-chara');
     const portraitChara = document.querySelector('#portrait-chara');
-    portraitChara.src = getPathChara(linkImage, true);
+
     const resultPathChara = getPathChara(linkImage, false);
+    portraitChara.src = getPathChara(linkImage, true);
 
     const renderResult = (result) => {
         profCharaElement.profileChara = result;
         listSkillTalentElement.skillTalents = result.skillTalents;
         listConstellation.listConstellations = result.constellations;
+
+        if (result.link !== undefined) portraitChara.src = `${result.link}/portrait.webp`;
 
         portraitChara.classList.remove('placeholder');
     };
@@ -44,15 +32,18 @@ const detailCharacter = (linkImage) => {
         }
     };
 
+    search('characters', renderResult);
+
     loadDetailChara();
 };
 
-const slideShow = () => {
+const slideShow = (changeTab) => {
     const tabIndicator = document.querySelector('tab-indicators');
     const iconIndicator = document.querySelectorAll('tab-item img');
     const tabActive = document.getElementsByClassName('.p-active')[0];
 
     if (tabActive === undefined) {
+        // get data default show
         iconIndicator[0].classList.add('p-active');
         detailCharacter(iconIndicator[0].src);
     }
@@ -67,6 +58,16 @@ const slideShow = () => {
             e.target.classList.add('p-active');
         }
     });
+
+    if (changeTab !== undefined) {
+        for (const icon of iconIndicator) {
+            if (icon.src.includes(changeTab)) {
+                detailCharacter(iconIndicator.src);
+                iconIndicator.classList.add('p-active');
+            }
+            icon.className = 'rounded-circle';
+        }
+    }
 };
 
 export default slideShow;

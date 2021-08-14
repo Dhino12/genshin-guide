@@ -12,8 +12,8 @@ class ListSkillTalent extends HTMLElement {
     }
 
     connectedCallback() {
-        this._classList = this.getAttribute('class');
-        this._id = this.getAttribute('id');
+        this.setAttribute('class', 'carousel slide d-block');
+        this.setAttribute('id', 'carousel-skill-telents');
     }
 
     render() {

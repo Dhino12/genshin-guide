@@ -1,6 +1,7 @@
 import slideShow from './detailCharacter';
 import DataCharacter from '../data/data-source';
 import EffectSkill from './effect/effectPage';
+import search from './search/search';
 
 const main = () => {
     const tabIndicators = document.querySelector('tab-indicators');
@@ -22,6 +23,7 @@ const main = () => {
     };
 
     onLoadedTabIndicators();
+    search('characters');
 
     EffectSkill.headerScrolEffect();
     EffectSkill.skillSlider();
