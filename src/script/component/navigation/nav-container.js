@@ -4,7 +4,6 @@ class NavContainer extends HTMLElement{
 
     constructor(){
         super();
-        console.log("NavContainer");
         this.render();
     }
     

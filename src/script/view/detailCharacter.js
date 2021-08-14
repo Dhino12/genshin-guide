@@ -1,6 +1,3 @@
-import "../component/detailCharacter/profile-chara.js";
-import "../component/detailCharacter/skillCarousel/list-skill-talent.js";
-import "../component/detailCharacter/constellation/list-constellation";
 import DataCharacter from "../data/data-source.js";
 
 const slideShow = () => { 
@@ -31,7 +28,7 @@ const detailCharacter = (linkImage) => {
     listSkillTalentElement.setAttribute("class", "carousel slide d-block");
     listSkillTalentElement.setAttribute("id", "carousel-skill-telents");
     
-    const listConstellation = document.querySelector("list-constellation");
+    const listConstellation = document.querySelector("list-card-grid");
 
     const portraitChara = document.querySelector("#portrait-chara");
     portraitChara.src = getPathChara(linkImage, true);
@@ -40,10 +37,10 @@ const detailCharacter = (linkImage) => {
     const loadDetailChara = async() => {
         try{
             portraitChara.classList.add("placeholder");
-            const profileCharacter = await DataCharacter.getDetailChara(resultPathChara);
+            const profileCharacter = await DataCharacter.getDetailItem(resultPathChara);
             renderResult(profileCharacter);
         }catch(e){
-            alert(e);
+            alert("Gagal mengambil data detail, internet dalam masalah");
         }
     }
 

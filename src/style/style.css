@@ -207,6 +207,7 @@ body{
     background-color: #fff;
 }
 
+/* skill */
 .carousel-prev,
 .carousel-next {
     position: absolute;
@@ -232,6 +233,16 @@ body{
     right: 50px;
 }
 
+/* end skill */
+
 .transitionAdd{
     transition: 0.5s ease;
 }
+
+/* constellation */
+.card-img-top{
+    width: 200px;
+    text-align: center;
+    margin-left: 10%;
+}
+/* end constellation */

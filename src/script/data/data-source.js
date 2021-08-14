@@ -1,8 +1,8 @@
 const apiEndpoint = "http://api.genshin.dev"
 
 class DataCharacter{ 
-    static getNameChara(){
-        return fetch(`${apiEndpoint}/characters`)
+    static getListName(path){
+        return fetch(`${apiEndpoint}/${path}`)
             .then(response => {
                 return response.json();
             })
@@ -16,7 +16,7 @@ class DataCharacter{
         
     }
 
-    static getDetailChara(pathCharacter) {
+    static getDetailItem(pathCharacter) {
         return fetch(`${apiEndpoint}${pathCharacter}`)
             .then(response => {
                 return response.json()

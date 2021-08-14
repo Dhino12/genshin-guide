@@ -1,4 +1,4 @@
-import "./item-constellation";
+import "./card-itm";
 
 class ListConstellation extends HTMLElement {
 
@@ -7,7 +7,6 @@ class ListConstellation extends HTMLElement {
     }
 
     set listConstellations(constellations) {
-        console.log(constellations);
         this._listConstellation = constellations;
         this.render();
     }
@@ -19,14 +18,13 @@ class ListConstellation extends HTMLElement {
     render() {  
         this.innerHTML = "";
         this._listConstellation.forEach(constellation => {
-            const createItem = document.createElement("item-constellation");
-            createItem.setAttribute("class", "card me-3 col-1 rounded-3 bg-grey-transparant");
+            const createItem = document.createElement("card-item");
+            createItem.setAttribute("class", "card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0");
             createItem.setAttribute("style", "width: 18rem;");
             createItem.itemConstellation = constellation;
             this.appendChild(createItem);
         });
-
     }
 }
 
-customElements.define('list-constellation', ListConstellation);
+customElements.define('list-card-grid', ListConstellation);

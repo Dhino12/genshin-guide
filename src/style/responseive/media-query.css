@@ -9,7 +9,8 @@
     }
 
     .title-nav{
-        color: #0F3460;
+        font-family: 'oswald', sans-serif;
+        color: #E94560;
     }
 
     #navbar a.active-page::before,
