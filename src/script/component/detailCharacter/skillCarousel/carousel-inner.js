@@ -1,30 +1,30 @@
-import "./item-skill";
+/* eslint-disable no-underscore-dangle */
+import './item-skill';
 
-class CarouselInner extends HTMLElement{
-
-    constructor(){
+class CarouselInner extends HTMLElement {
+    constructor() {
         super();
     }
 
-    set carouselInner(skillChara){
+    set carouselInner(skillChara) {
         this._skillItem = skillChara;
     }
 
-    connectedCallback(){
-        this._classList = this.getAttribute("class");
-        this._id = this.getAttribute("id");
-        
+    connectedCallback() {
+        this._classList = this.getAttribute('class');
+        this._id = this.getAttribute('id');
+
         this.render();
     }
 
-    render(){    
+    render() {
         this._skillItem.forEach((skill, index) => {
-            const elementItemSkill = document.createElement("item-skill");
+            const elementItemSkill = document.createElement('item-skill');
             elementItemSkill.itemSkill = skill;
-            if(index === 0){
-                elementItemSkill.setAttribute("class", "carousel-item active");
-            }else{
-                elementItemSkill.setAttribute("class", "carousel-item");
+            if (index === 0) {
+                elementItemSkill.setAttribute('class', 'carousel-item active');
+            } else {
+                elementItemSkill.setAttribute('class', 'carousel-item');
             }
             this.appendChild(elementItemSkill);
         });
@@ -38,7 +38,7 @@ class CarouselInner extends HTMLElement{
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        `
+        `;
     }
 }
 

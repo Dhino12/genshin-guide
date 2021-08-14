@@ -1,21 +1,19 @@
-import "./inner-nav";
+import './inner-nav';
 
-class NavContainer extends HTMLElement{
-
-    constructor(){
+class NavContainer extends HTMLElement {
+    constructor() {
         super();
         this.render();
     }
-    
-    connectedCallback(){
-        this.setAttribute("class", "navbar navbar-expand-lg");
+
+    connectedCallback() {
+        this.setAttribute('class', 'navbar navbar-expand-lg');
     }
 
-    render(){
-        const createInnerNav = document.createElement("inner-nav");
+    render() {
+        const createInnerNav = document.createElement('inner-nav');
         this.appendChild(createInnerNav);
-
     }
 }
 
-customElements.define("nav-container", NavContainer);
+customElements.define('nav-container', NavContainer);

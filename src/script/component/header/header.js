@@ -1,33 +1,31 @@
-import "./search-bar";
+import './search-bar';
 
-class HeaderItem extends HTMLElement{
-
-    constructor(){
+class HeaderItem extends HTMLElement {
+    constructor() {
         super();
     }
 
-    connectedCallback(){
-        this.setAttribute("class", "py-3 mb-3 ");
+    connectedCallback() {
+        this.setAttribute('class', 'py-3 mb-3 ');
         this.render();
     }
 
-    render(){
+    render() {
         this.innerHTML = `
-        <div class="d-grid gap-3 align-items-center px-lg-5" style="grid-template-columns: 0.3fr 2fr 0.1fr;">
-            <div class="ps-xl-5 text-center">
-                <a href="#" class="">
-                    <span class="fs-4">
+        <div class='d-grid gap-3 align-items-center px-lg-5' style='grid-template-columns: 0.3fr 2fr 0.1fr;'>
+            <div class='ps-xl-5 text-center'>
+                <a href='#' class=''>
+                    <span class='fs-4'>
                         <img src="src/assets/image/logo/logo_genshin.png" width="124px" alt="logo">
                     </span>
                 </a>
             </div>
 
             <search-bar></search-bar>
-            <button type="submit" class="btn btn-light p-2" value="search"><i class="fas fa-search"></i></button>
+            <button type='submit' class='btn btn-light p-2' value='search'><i class='fas fa-search'></i></button>
         </div>
-        `
-        
+        `;
     }
 }
 
-customElements.define("header-item", HeaderItem);
+customElements.define('header-item', HeaderItem);

@@ -1,5 +1,5 @@
+/* eslint-disable no-underscore-dangle */
 class ItemConstellation extends HTMLElement {
-
     constructor() {
         super();
     }
@@ -9,8 +9,8 @@ class ItemConstellation extends HTMLElement {
     }
 
     connectedCallback() {
-        this._classList = this.getAttribute("class");
-        this._style = this.getAttribute("style");
+        this._classList = this.getAttribute('class');
+        this._style = this.getAttribute('style');
         this.render();
     }
 
@@ -18,14 +18,14 @@ class ItemConstellation extends HTMLElement {
         this.innerHTML = `
             <div class="card bg-transparent" style="width: 18rem;">
                 <img class="card-img-top" "200px" src="${
-                    (this._itemConstellation.unlock === undefined)? 
-                        `https://api.genshin.dev/artifacts/${this._itemConstellation}/flower-of-life.webp` : ''
+                    (this._itemConstellation.unlock === undefined)
+                        ? `https://api.genshin.dev/artifacts/${this._itemConstellation}/flower-of-life.webp` : ''
                 }">
                 <div class="p-lg-3 text-center">
-                    <h5 class="card-title">${(this._itemConstellation.name === undefined)? 
-                        this._itemConstellation : this._itemConstellation.name }</h5> 
+                    <h5 class="card-title">${(this._itemConstellation.name === undefined)
+                        ? this._itemConstellation : this._itemConstellation.name}</h5> 
                 </div>
-                ${(this._itemConstellation.unlock === undefined)? `` :  `
+                ${(this._itemConstellation.unlock === undefined) ? '' : `
                     <ul class="ps-0 list-group-flush">
                         <li class="list-group-item bg-grey-more">${this._itemConstellation.unlock}</li>
                         <li class="list-group-item bg-grey-more overflow-auto" style="height: 200px  ;">${this._itemConstellation.description}</li>
@@ -34,7 +34,7 @@ class ItemConstellation extends HTMLElement {
                 `}
                 
             </div>
-        `
+        `;
     }
 }
 

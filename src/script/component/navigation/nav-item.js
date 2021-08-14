@@ -1,5 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-underscore-dangle */
 class NavItem extends HTMLElement {
-
     constructor() {
         super();
     }
@@ -10,18 +11,18 @@ class NavItem extends HTMLElement {
     }
 
     connectedCallback() {
-        this.id = "navbar";
-        this.setAttribute("class", "navbars collapse navbar-collapse flex-column");
-        this.render()
+        this.id = 'navbar';
+        this.setAttribute('class', 'navbars collapse navbar-collapse flex-column');
+        this.render();
     }
 
     render() {
-        let pages = ""
+        let pages = '';
         for (const page of this._namePage) {
-            if (page == "character") {
-                pages += `<a class="nav-link mb-2" href="index.html"><span>${page.toUpperCase()}</span></a>`
+            if (page == 'character') {
+                pages += `<a class="nav-link mb-2" href="index.html"><span>${page.toUpperCase()}</span></a>`;
             } else {
-                pages += `<a class="nav-link mb-2" href="${page}.html"><span>${page.toUpperCase()}</span></a>`
+                pages += `<a class="nav-link mb-2" href="${page}.html"><span>${page.toUpperCase()}</span></a>`;
             }
         }
 
@@ -29,8 +30,8 @@ class NavItem extends HTMLElement {
         <nav class="nav navbar-nav flex-column">
             ${pages}
         </nav>  
-        `
+        `;
     }
 }
 
-customElements.define("nav-item", NavItem);
+customElements.define('nav-item', NavItem);

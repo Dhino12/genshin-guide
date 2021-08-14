@@ -1,7 +1,7 @@
-import "./card-itm";
+/* eslint-disable no-underscore-dangle */
+import './card-itm';
 
 class ListConstellation extends HTMLElement {
-
     constructor() {
         super();
     }
@@ -12,15 +12,15 @@ class ListConstellation extends HTMLElement {
     }
 
     connectedCallback() {
-        this._classList = this.getAttribute("class");
+        this._classList = this.getAttribute('class');
     }
 
-    render() {  
-        this.innerHTML = "";
-        this._listConstellation.forEach(constellation => {
-            const createItem = document.createElement("card-item");
-            createItem.setAttribute("class", "card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0");
-            createItem.setAttribute("style", "width: 18rem;");
+    render() {
+        this.innerHTML = '';
+        this._listConstellation.forEach((constellation) => {
+            const createItem = document.createElement('card-item');
+            createItem.setAttribute('class', 'card me-3 col-1 rounded-3 bg-grey-transparant mb-3 border-0');
+            createItem.setAttribute('style', 'width: 18rem;');
             createItem.itemConstellation = constellation;
             this.appendChild(createItem);
         });
