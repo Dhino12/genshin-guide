@@ -4,12 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        character: './src/index.js',
+        index: './src/index.js',
         artifacts: './src/artifacts.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
+        filename: '[name].bundle.js',
     },
     optimization: {
         splitChunks: {

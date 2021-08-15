@@ -6,7 +6,6 @@ class NavItem extends HTMLElement {
     }
 
     set namePage(namePage) {
-        console.log(namePage);
         this._namePage = namePage;
     }
 

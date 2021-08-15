@@ -1,3 +1,4 @@
+import 'regenerator-runtime';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/js/fontawesome.min';
 import '@fortawesome/fontawesome-free/js/brands';
@@ -12,8 +13,6 @@ import './script/component/detailCharacter/constellation/list-card-grid';
 
 import main from './script/view/main';
 
-const locationLink = window.location.pathname;
-
-if (locationLink === '/' || locationLink === '/index.html') {
+if (window.location.pathname === '/' || window.location.pathname.split('/')[1] === 'index.html') {
     document.addEventListener('DOMContentLoaded', main);
 }

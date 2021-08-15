@@ -17,7 +17,7 @@ class HeaderItem extends HTMLElement {
             <div class='ps-xl-5 text-center'>
                 <a href='#' class=''>
                     <span class='fs-4'>
-                        <img src="src/assets/image/logo/logo_genshin.png" width="124px" alt="logo">
+                        <img src="https://i.ibb.co/mXtnp36/e196a317a29228f8449c.png" width="124px" alt="logo">
                     </span>
                 </a>
             </div>

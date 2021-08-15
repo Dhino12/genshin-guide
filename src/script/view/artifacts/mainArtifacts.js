@@ -4,6 +4,7 @@ import search from '../search/search';
 
 const artifacts = () => {
     const getListGrid = document.querySelector('list-card-grid');
+    console.log(window.location.pathname);
 
     const renderResult = (results) => {
         getListGrid.listConstellations = results;
