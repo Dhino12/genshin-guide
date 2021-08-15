@@ -30,6 +30,7 @@ class EffectSkill {
     static skillSlider() {
         // eslint-disable-next-line no-unused-vars
         const slideSkill = new Carousel(document.querySelector('.carousel'));
+        console.log(slideSkill);
     }
 }
 
