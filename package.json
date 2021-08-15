@@ -4,8 +4,6 @@
   "description": "genshin_guide(build_character & farming)",
   "main": "index.js",
   "scripts": {
-    "predeploy" : "webpack serve --config webpack.dev.js",
-    "deploy": "gh-pages -d deploy",
     "build": "webpack --config webpack.prod.js",
     "start-dev": "webpack serve --config webpack.dev.js --open"
   },
@@ -19,7 +17,7 @@
   "author": "dhino12",
   "license": "ISC",
   "bugs": {
-    "url": "https://Dhino12.github.io/genshin-guide"
+    "url": "https://github.com/Dhino12/genshin-guide/issues"
   },
   "homepage": "https://github.com/Dhino12/genshin-guide#readme",
   "devDependencies": {
