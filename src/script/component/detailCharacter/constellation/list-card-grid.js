@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import './card-itm';
+import './card-item';
 
 class ListConstellation extends HTMLElement {
     constructor() {
